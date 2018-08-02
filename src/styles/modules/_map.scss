@@ -1,0 +1,34 @@
+.map {
+  background-image: linear-gradient(rgba(darken($color-blue, 10%), .9), rgba(darken($color-blue, 10%), .9)), url('/assets/imgs/map.png');
+
+  max-width: 680px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: -150px;
+  box-shadow: $shadow-card;
+  text-align: center;
+  padding: $p-xl;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 100px;
+  z-index: 3;
+
+  .hours {
+    color: $color-text-light;
+    padding-top: $p-md;
+
+    &__title {
+      font-size: $font-subheader;
+    }
+    &__body {
+      font-weight: 300;
+      opacity: .7;
+    }
+  }
+  @include whenSmall {
+    margin-top: -220px;
+  }
+}

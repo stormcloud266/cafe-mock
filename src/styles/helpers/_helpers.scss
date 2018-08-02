@@ -1,0 +1,28 @@
+.intro {
+  font-family: 'Clicker Script', cursive;
+  color: $color-accent;
+  font-size: 5.2rem;
+  line-height: 1;
+}
+.waves {
+  background-image: url('/assets/imgs/waves.svg');
+  background-size: cover;
+  background-position: center;
+  height: 140px;
+  width: 100%;
+  @include whenMedium {
+    height: 80px;
+  }
+  @include whenSmall {
+    height: 50px;
+  }
+}
+.cta-button {
+  display: inline-block;
+  background: $color-accent;
+  color: $color-text-xdark;
+  padding: $p-sm $p-xl;
+  border-radius: 40px;
+  margin-top: 3.6rem;
+  box-shadow: $shadow-button;
+}

@@ -1,0 +1,133 @@
+.team {
+  height: 1200px;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+
+  background-image: linear-gradient(
+    rgba(20,20,20,.8),
+    rgba(60,60,60,.8),
+    rgba($color-body, .2),
+    $color-body),
+    url('/assets/imgs/vert-lights.jpg');
+
+  background-size: cover;
+  background-position: center;
+
+  .svg-container {
+    position: absolute;
+    display: block;
+    top: -2px;
+    width: 100%;
+    height: auto;
+    svg {
+      height: auto;
+      max-height: 100px;
+    }
+  }
+
+  .intro {
+    font-size: 4.8rem;
+  }
+  &__inner {
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    font-size: $font-header-section;
+    color: $color-text-light;
+    letter-spacing: .4rem;
+    line-height: 1;
+  }
+
+  &__cards {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-top: 8.8rem;
+  }
+  &__card {
+    position: relative;
+    transition: all .3s;
+
+    &-image {
+      height: 400px;
+      display: block;
+    }
+
+    &--main {
+      height: 480px;
+      width: 360px;
+      background: $color-blue;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 4;
+      box-shadow: $shadow-button;
+      padding: $p-md $p-xl;
+      color: $color-text-medium;
+      font-weight: 300;
+      font-size: 1.7rem;
+      line-height: 1.8;
+    }
+    &--left {
+      margin: 0 0 0 8rem;
+      z-index: 3;
+    }
+    &--right {
+      margin: 0 8rem 0;
+      z-index: 3;
+    }
+    &--left:hover, &--right:hover {
+      z-index: 5;
+      transform: scale(1.1);
+      box-shadow: $shadow-button;
+    }
+    small {
+      padding-top: $p-sm;
+      display: block;
+      opacity: .6;
+    }
+  }
+  &__pfp {
+    border-radius: 100%;
+    border: 3px solid $color-text-dark;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    bottom: 4rem;
+    transform: translateX(-50%);
+  }
+
+  @include whenMedium {
+    &__title {
+      font-size: $font-header-section-sm;
+    }
+    &__inner {
+      padding-top: 100px;
+    }
+    &__card {
+      &--main {
+        height: auto;
+        padding-bottom: 140px;
+      }
+      &--left {
+        z-index: 3;
+        left: 60px;
+        top: 40px;
+      }
+      &--right {
+        z-index: 3;
+        right: 60px;
+        top: 80px;
+
+      }
+    }
+    &__pfp {
+      bottom: 2rem;
+    }
+  }
+}

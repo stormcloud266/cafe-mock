@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html { font-size: 62.5%; }
+body {
+  background: $color-body;
+  color: $color-text-dark;
+  font-size: 19px;
+  font-size: $font-body;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { text-decoration: none; }
+li { list-style: none; }
+h1,h2,h3 { font-weight: 200; }

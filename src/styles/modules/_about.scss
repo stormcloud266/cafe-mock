@@ -1,0 +1,49 @@
+.about {
+  padding-top: $m-section-lg;
+  padding-bottom: 6rem;
+  position: relative;
+  overflow-x: hidden;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__img {
+    margin-left: 5rem;
+    img {
+      max-width: 300px;
+      height: auto;
+      opacity: .5;
+    }
+  }
+
+  &__text {
+    max-width: 600px;
+    margin-top: -50px;
+  }
+
+  @include whenMedium {
+    &__img {
+      margin-left: 3rem;
+      img {
+        max-width: 200px;
+      }
+    }
+
+  }
+  @include whenSmall {
+    padding-top: $m-section-sm;
+    text-align: center;
+    &__img {
+      margin-left:0;
+
+      img {
+        max-width: 300px;
+        position: absolute;
+        right: -60px;
+        top: 40px;
+        opacity: .12;
+      }
+    }
+  }
+}

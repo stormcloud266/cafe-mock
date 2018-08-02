@@ -1,0 +1,94 @@
+.footer {
+  height: 600px;
+  width: 100%;
+  background: $color-blue;
+  padding-top: 160px;
+  position: relative;
+
+  // justify-content: center;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__nav {
+    margin-bottom: 80px;
+
+    ul {
+      display: flex;
+      border-bottom: 1px solid $color-accent;
+
+      li { margin: $p-sm 4.8rem; }
+      a { color: $color-text-light; }
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 700px;
+  }
+  &__title {
+    color: $color-text-light;
+    opacity: .7;
+    margin-bottom: $p-md;
+  }
+
+  &__contact {
+
+  }
+  &__section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: $p-sm;
+    i {
+      margin-right: $p-lg;
+      width: 20px;
+      color: $color-accent;
+      opacity: .9;
+
+    }
+    p {
+      color: $color-text-light;
+      opacity: .9;
+      font-size: 1.7rem;
+    }
+  }
+
+  .legal {
+    width: 100%;
+    background: $color-text-xdark;
+    font-size: 1.4rem;
+    text-align: center;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 0;
+    font-weight: 300;
+    padding: 5px;
+
+    p, a {
+      color: $color-text-light;
+      opacity: .69;
+    }
+  }
+@include whenSmall {
+  height: auto;
+  padding-bottom: 80px;
+  &__nav {
+    margin-bottom: 60px;
+
+    ul {
+      li { margin: $p-sm 3.2rem; }
+    }
+  }
+  &__bottom {
+    flex-direction: column;
+  }
+  &__contact {
+    margin-bottom: $p-xl;
+  }
+}
+}

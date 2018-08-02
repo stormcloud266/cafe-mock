@@ -1,0 +1,76 @@
+.menu {
+margin: 0 $p-sm;
+
+  &__inner {
+    max-width: 800px;
+    background: darken($color-body, 2%);
+    padding: $p-lg;
+    box-shadow: $shadow-card;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: -200px;
+  }
+
+  &__title {
+    font-size: $font-header-section;
+    line-height: 1;
+  }
+  &__nav {
+    margin-top: 4.8rem;
+    padding-bottom: $p-md;
+    border-bottom: 3px solid;
+    border-color:rgba($color-accent, 0.7);
+
+
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+    li {
+      margin: 0 $p-sm;
+    }
+    a {
+      font-size: $font-body-lg;
+      padding: $p-sm;
+      color: $color-text-dark;
+    }
+  }
+
+  &__section {
+    padding-bottom: $p-xl;
+
+    .item {
+      text-align: left;
+      border-bottom: 1px solid $color-text-medium;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: $p-xl;
+
+      &__title {
+        font-size: $font-body-lg;
+        font-weight: 400;
+      }
+      &__desc {
+        font-weight: 300;
+        opacity: .8;
+      }
+      .prices {
+        display: flex;
+      }
+      &__price {
+        font-size: $font-body-lg;
+        margin-left: $p-md;
+      }
+    }
+  }
+  @include whenSmall {
+    &__inner {
+      top: -280px;
+    }
+    &__title {
+      font-size: $font-header-section-sm;
+    }
+  }
+}
