@@ -20,9 +20,7 @@
     color: $color-text-light;
     padding-top: $p-md;
 
-    &__title {
-      font-size: $font-subheader;
-    }
+    &__title { font-size: $font-subheader; }
     &__body {
       font-weight: 300;
       opacity: .7;
@@ -30,5 +28,6 @@
   }
   @include whenSmall {
     margin-top: -220px;
+    transform: translate3d(0,0,0);
   }
 }

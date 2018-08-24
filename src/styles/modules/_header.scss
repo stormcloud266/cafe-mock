@@ -4,18 +4,24 @@
   color: $color-text-light;
   position: relative;
   padding: 0 $p-lg;
+  background-color: #161416;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  &__bg {
+    background-image: linear-gradient(rgba(20, 20, 20, 0.78), rgba(20, 20, 20, 0.78)),
+      url('/assets/imgs/barista.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 0;
+    animation-delay: .6s;
+  }
 
-
-  background-image: linear-gradient(rgba(20, 20, 20, 0.78), rgba(20, 20, 20, 0.78)),
-    url('/assets/imgs/barista.jpg');
-  background-size: cover;
-  background-position: center;
 
   &__title {
     font-weight: 300;
@@ -51,6 +57,9 @@
     top: 0;
     left: 0;
     margin: $p-sm 0;
+  }
+  &__link {
+    z-index: 3;
   }
 
   @include whenSmall {

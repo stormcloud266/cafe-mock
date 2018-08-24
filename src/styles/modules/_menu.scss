@@ -1,5 +1,5 @@
 .menu {
-margin: 0 $p-sm;
+  margin: 0 $p-sm;
 
   &__inner {
     max-width: 800px;
@@ -28,17 +28,21 @@ margin: 0 $p-sm;
       justify-content: center;
     }
     li {
-      margin: 0 $p-sm;
-    }
-    a {
+      margin: 0 $p-lg $p-sm;
       font-size: $font-body-lg;
-      padding: $p-sm;
       color: $color-text-dark;
+      cursor: pointer;
+      &.active {
+        border-bottom: 2px solid $color-accent;
+      }
     }
   }
 
   &__section {
     padding-bottom: $p-xl;
+    display: none;
+
+    &.visible { display: block; }
 
     .item {
       text-align: left;
@@ -56,9 +60,8 @@ margin: 0 $p-sm;
         font-weight: 300;
         opacity: .8;
       }
-      .prices {
-        display: flex;
-      }
+      .prices { display: flex; }
+
       &__price {
         font-size: $font-body-lg;
         margin-left: $p-md;
@@ -66,11 +69,7 @@ margin: 0 $p-sm;
     }
   }
   @include whenSmall {
-    &__inner {
-      top: -280px;
-    }
-    &__title {
-      font-size: $font-header-section-sm;
-    }
+    &__inner { top: -280px; }
+    &__title { font-size: $font-header-section-sm; }
   }
 }

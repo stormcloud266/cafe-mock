@@ -29,8 +29,8 @@
         max-width: 200px;
       }
     }
-
   }
+  
   @include whenSmall {
     padding-top: $m-section-sm;
     text-align: center;

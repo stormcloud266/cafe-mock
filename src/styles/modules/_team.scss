@@ -26,9 +26,8 @@
     }
   }
 
-  .intro {
-    font-size: 4.8rem;
-  }
+  .intro { font-size: 4.8rem; }
+  
   &__inner {
     padding-top: 120px;
     display: flex;
@@ -103,12 +102,10 @@
   }
 
   @include whenMedium {
-    &__title {
-      font-size: $font-header-section-sm;
-    }
-    &__inner {
-      padding-top: 100px;
-    }
+    &__title { font-size: $font-header-section-sm; }
+    .svg-container { transform: translate3d(0,0,0); }
+    &__inner { padding-top: 100px; }
+
     &__card {
       &--main {
         height: auto;
@@ -126,8 +123,6 @@
 
       }
     }
-    &__pfp {
-      bottom: 2rem;
-    }
+    &__pfp { bottom: 2rem; }
   }
 }
